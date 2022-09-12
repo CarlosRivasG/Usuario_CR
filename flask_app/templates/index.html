@@ -31,7 +31,8 @@
                 <td>{{ user.email }}</td>
                 <td>{{ user.created_at }}</td>
                 <td>{{ user.updated_at }}</td>
-                <td> <a class="btn btn-outline-primary btn-sm" href="/users/detalle/{{user.id}}"><i class="fa fa-search-plus fa-lg" aria-hidden="true"></i></a>  
+                <td>  
+                    <a class="btn btn-outline-primary btn-sm" href="/users/detalle/{{user.id}}"><i class="fa fa-database" aria-hidden="true"></i> </a>  
                     <a class="btn btn-outline-danger btn-sm" href="/user/eliminar/{{user.id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></td>
             </tr>
             {% endfor %}
