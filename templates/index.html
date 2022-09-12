@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" >
+    <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet">
+
+
     <title></title>
 </head>
 <body>
@@ -17,6 +20,7 @@
                 <th>Email</th>
                 <th>Created At</th>
                 <th>updated At</th>
+                <th>Operaciones</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +31,8 @@
                 <td>{{ user.email }}</td>
                 <td>{{ user.created_at }}</td>
                 <td>{{ user.updated_at }}</td>
+                <td> <a class="btn btn-outline-primary btn-sm" href="/users/detalle/{{user.id}}"><i class="fa fa-search-plus fa-lg" aria-hidden="true"></i></a>  
+                    <a class="btn btn-outline-danger btn-sm" href="/user/eliminar/{{user.id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></td>
             </tr>
             {% endfor %}
         </tbody>
